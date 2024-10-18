@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SURAJ SINGH GAHARWAR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+     darkMode:'class',
+     theme: {
+      extend: {
+
+      colors :{
+        'darkbody' :'#010f20',
+        'msgbg':'#011835'
+      },  
+      padding: {
+        '1/2': '50%',
+        full: '100%',
+      },
+
+      fontFamily: {
+         Poppins :["Poppins", "sans-serif"],
+      },
+
+      keyframes: {
+        blob: {
+          '0%,100%': { 'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%' },
+          '50%': {'border-radius': '30% 75% 70% 40% / 50% 60% 35% 60%' },
+        },
+        },
+      },
+      animation: {
+        'blobing': 'blob 5s linear infinite',
+      },
+    },
+  }
+  </script>
+  <!-- <link rel="stylesheet" href="./output.css" /> -->
+  <link async rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="asset/logo.png">
+  
+  <!-- aos css -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- custom css for some extra features -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="scroll h-screen dark:bg-darkbody bg-slate-600 ">
+  <canvas id="canvas" class="-z-10 scale-[1.18] fixed opacity-5" ></canvas> 
+  
+
+  <!-- Header section starts here -->
+  <header class="grid md:fixed w-full place-content-center z-50 cursor-pointer "> <!--bg-cyan-100 -->
+    <nav data-aos="fade-down" id="nav"
+      class="flex place-content-between place-items-center h-14 w-[23rem] px-6 lg:ml-2 text-white backdrop-blur-sm  md:bg-white/30 dark:bg-darkbody dark:border-cyan-400 border-b-2 border-l-2 border-r-2 rounded-b-xl md:px-10 md:w-[58rem] md:h-[4.5rem]"> <!-- bg-cyan-300-->
+      <h1 class="text-md font-semibold font-Poppins lg:text-2xl gradient">SURAJ SINGH GAHARWAR</h1>
+      <ul class="hidden md:flex gap-10 text-md font-Poppins font-medium">
+        <a href="#herosection"><li class="hover:text-cyan-200" >Home</li></a>
+        <a href="#aboutsection"><li class="hover:text-cyan-200" >About</li></a>
+        <a href="#skillssection"><li class="hover:text-cyan-200" >Skills</li></a>
+        <a href="#projectssection"><li class="hover:text-cyan-200" >Projects</li></a>
+        <a href="#experiencesection"><li class="hover:text-cyan-200" >Experience</li></a>
+      </ul>
+      <div class="visible font-Poppins text-md md:text-xl flex flex-row">
+        <button id="moon" class="hover:text-darkbody"><i class="uil uil-moon" id="theme-button"></i></button>
+        <button id="sun" class="hover:text-yellow-300 hidden"><i class="uil uil-sun" id="theme-button"></i></button>
+        <button class="ml-2 visible md:invisible"><i class="uil uil-apps"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- header section ends here -->
+
+
+  <main class="">
+    
+    <section id="herosection" class="pt-2 w-screen p-4 lg:p-14 lg:flex place-content-center md:pt-24 lg:pt-28">
+      <div class=" max-w-full rounded-xl lg:w-[56rem] text-white bg-white/10 md:bg-transparent"> <!--bg-slate-100-->
+        <!-- hero section icons -->
+        <div id="outer_hero" class="grid lg:p-1 rounded-md  grid-cols-[1fr,5fr] grid-rows-1 md:flex "> <!--bg-white-->
+
+          <ul data-aos="fade-right" class="flex flex-col gap-4  p-4  place-content-center font-Poppins text-xl md:py-0 text-darkbody"> <!--bg-green-300-->
+            <li class="px-2 py-1 bg-white/70  dark:bg-cyan-400 text-center rounded">
+              <a aria-label="Linkedin" href="https://www.linkedin.com/in/suraj-singh-gaharwar-6b25b3251/" class="footer_social"
+                target="_blank">
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+            </li>
+
+            <li class="px-2 py-1  bg-white/70  dark:bg-cyan-400 text-center rounded">
+              <a aria-label="Github" href="https://github.com/surajgaharwar" class="footer_social" target="_blank">
+                <i class=" uil uil-github-alt"></i>
+              </a>
+            </li>
+            <!-- Twitter Icon -->
+            <li class="px-2 py-1  bg-white/70  dark:bg-cyan-400 text-center rounded">
+              <a aria-label="Twitter" href="https://wa.me/qr/7PE4X5M4P3LLK1 " class="footer_social" target="_blank">
+                <i class="uil uil-twitter-alt"></i>
+              </a>
+            </li>
+            <!-- Insta Icon -->
+            <li class="px-2 py-1  bg-white/70  dark:bg-cyan-400 text-center rounded">
+              <a aria-label="Instagram" href="https://www.instagram.com/surajgaharwar__/?igsh=a3FzdHFybGZxNGJ1" class="footer_social"
+                target="_blank">
+                <i class="uil uil-instagram"></i>
+              </a>
+            </li>
+
+          </ul>
+
+          <!-- hero section imp icons ends -->
+          <div id="hero_content" class="  p-6 row-start-2 col-start-1 col-end-3 font-Poppins lg:pr-0"> <!--bg-green-300-->
+            <div data-aos="fade-up" class="homeintro">
+              <h1 class="pb-3 text-5xl font-extrabold lg:text-7xl tracking-wider md:pb-6">I am </h1>
+              <h1 class="pb-3 text-5xl font-extrabold lg:text-7xl md:pb-6 gradient">SURAJ SINGH GAHARWAR</h1>
+              <h3 class="text-lg font-semibold pb-4"><span class="typewriter"></span>
+                interests me</h3>
+            </div>
+            <ui >
+              <li
+                class="gradient text-md border-2 rounded inline-block mr-1 mb-1 px-2 py-1 border-solid dark:border-cyan-400 md:text-md">
+                Front End Developer</li>
+              <li
+                class="gradient text-md border-2 rounded inline-block mr-1 mb-1 px-2 py-1 border-solid dark:border-cyan-400 md:text-md">
+                OpenSource Advocate</li>
+              <li
+                class="gradient text-md border-2 rounded inline-block mr-1 mb-1 px-2 py-1 border-solid dark:border-cyan-400 md:text-md">
+                Database Management</li>
+              <!-- <li
+                class="gradient text-md border-2 rounded inline-block mr-1 mb-1 px-2 py-1 border-solid dark:border-cyan-400 md:text-md">
+                </li> -->
+            </ui>
+            <p data-aos="fade-up" class="text-sm py-6">A tech enthusiast and self learner, who <br> believes in the power of community.</p>
+            <a  href="file:///C:/Users/hp/AppData/Local/Microsoft/Windows/INetCache/IE/UAWK9AEL/[Oriental%20Institute%20of%20Science%20and%20Technology]%20[Bachelor%20of%20Technology%20in%20(CSE-AIML)%20CGPA%20[7.56][1].pdf" target="_blank"><button class=" p-3 rounded-md bg-white/70  dark:bg-cyan-400 text-darkbody">My Resume  <i class="uil uil-file-download-alt px-2"></i></button>
+          </div></a>
+
+          <div data-aos="fade-left" id="hero_img"
+            class="flex justify-center items-center row-start-1 col-start-2  p-8 w-full  md:w-96 lg:pr-16 lg:pl-0"> <!--bg-green-300-->
+            <div style="background-image: url(portfolio.jpg); box-shadow: 0 5px 5px 7px cyan "
+              class="aspect-square w-full animate-blobing  bg-cover bg-center bg-slate-400">
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    
+    <section id="aboutsection" class="w-screen place-content-center p-4 lg:p-14 lg:flex text-white">
+      <div  class="font-Poppins p-1 flex-col max-w-full rounded-xl lg:w-[56rem] bg-white/10 md:bg-transparent">  <!--bg-slate-100-->
+        <div data-aos="fade-up" id="header" class="flex flex-col items-center w-full p-4 lg:py-8">  <!--bg-green-300-->
+          <h1 class="text-3xl font-extrabold lg:text-4xl">About Me</h1>
+          <p class="text-sm font-medium lg:text-md">My Introduction</p>
+        </div>
+        <div id="div_body" class="w-full md:px-8 md:flex md:pb-10 md:h-max">  <!--bg-green-300-->
+          <div data-aos="fade-right" class=" p-4 w-full h-72 flex place-content-center md:w-fit md:mr-6">  <!--bg-green-300-->
+            <!-- <span style="background-image: url(collage.pg);"
+              class="bg-contain bg-center aspect-square rounded-full bg-slate-600"></span> -->
+          </div>
+          <div data-aos="fade-left" class="p-4  h-80 w-full lg:w-fit  grid place-items-center md:h-72">  <!--bg-green-300-->
+            <p class="text-center text-[15px]">I am a Computer Science Engineering Student currently pursuing B.Tech
+              with specialisation in AI and ML.<br><br>
+              I am skilled in Python, upskilling to get proficient in Web-Development with HTML, CSS, and
+              JavaScript. <br><br>
+              With diverse certificates and minor web-dev projects, I'm goal-driven and eager to use my tech expertise
+              to create innovative solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skillssection" class="w-screen place-content-center p-4 lg:p-14 lg:flex text-white">
+      <div id="skillscontainer" class="font-Poppins p-1 flex-col max-w-full rounded-xl lg:w-[56rem] bg-white/10 md:bg-transparent"> <!--bg-slate-100 -->
+        <div data-aos="fade-up" id="header" class="flex flex-col items-center w-full p-4 lg:py-8">  <!--bg-green-300-->
+          <h1 class="text-3xl font-extrabold lg:text-4xl">Skills</h1>
+          <p class="text-sm font-medium lg:text-md">My Technical Skills</p>
+        </div>
+        <div id="div_body" class="pb-8 w-full md:px-8 md:flex  md:h-max "> <!--bg-green-300-->
+          <div class=" p-4  w-full h-64 flex flex-col md:h-72">  <!--bg-green-300-->
+            <div id="content" class="flex">
+              <span data-aos="fade-up" class="flex items-center pl-2"><i class="text-4xl text-cyan-400 align-top uil uil-arrow skills_icon"></i></span>
+              <span data-aos="fade-up" class="px-4">
+                <h1 class="text-lg font-semibold">Languages & Frameworks</h1>
+                <p class="text-xs">Languages/Frameworks I worked with</p>
+              </span>
+            </div>
+            <div data-aos="fade-up" class="p-4">
+              <img class="my-7"="skills"
+                src="https://skillicons.dev/icons?i=java,cpp,py,html,css,js,django,regex,tailwind,bootstrap&theme=light&perline=5" />
+            </div>
+          </div>
+
+          <div class=" p-4  w-full h-64 flex flex-col md:h-72">  <!--bg-green-300-->
+            <div id="content" class="flex">
+              <span data-aos="fade-up" class="flex items-center pl-2"><i class="text-4xl text-cyan-400 align-top uil uil-wrench skills_icon"></i></span>
+              <span data-aos="fade-up" class="px-4">
+                <h1 class="text-lg font-semibold md">Tools & Software</h1>
+                <p class="text-xs">Tools/Software I use on regular basis</p>
+              </span>
+            </div>
+            <div data-aos="fade-up" class="p-4">
+              <img class="my-7"="skills"
+                src="https://skillicons.dev/icons?i=vscode,discord,linkedin,mysql,stackoverflow,replit,codepen,git,linux,github&theme=dark&perline=5" />
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="experiencesection" class="w-screen place-content-center p-4 lg:p-14 lg:flex">
+      <div id="educontainer" class="font-Poppins p-1 flex-col max-w-full rounded-xl lg:w-[56rem] text-white bg-white/10 md:bg-transparent"> <!-- bg-slate-100-->
+        <div data-aos="fade-up" id="header" class="flex flex-col items-center w-full  p-4 lg:py-8"> <!--bg-green-300-->
+          <h1 class="text-3xl font-extrabold lg:text-4xl">Experience</h1>
+          <p class="text-sm font-medium lg:text-md">My Qualification and Experience</p>
+        </div>
+        <div id="div_body" class="flex flex-col h-max pb-8 w-full md:px-8  "> <!-- bg-slate-300-->
+          <div data-aos="zoom-in" id="exp_header" class="py-4 flex items-center justify-center gap-4 md:gap-10 md:text-lg font-medium text-cyan-200 lg:text-2xl">
+            <span ><button id="edubtn"><i class="uil uil-briefcase-alt "></i>Education</button></span>
+            <span ><button id="workbtn"><i class="uil uil-graduation-cap "></i>Work</button></span>
+            <span ><button id="vbtn"><i class="uil uil-user qualification_icon"></i>Volunteering</button></span>
+          </div>
+          
+          <div id="education" class=" flex items-center flex-col py-4">
+            
+            <ul data-aos="fade-up" class="flex gap-3 h-fit ">
+              <li class=" w-32 md:w-40"><!-- bg-slate 500 -->
+                <p id="study" class="py-1 px-2 bg-cyan-200 w-fit rounded-lg font-semibold mb-1 text-msgbg">B.Tech,CSE AIML</p> <!--bg-red-400-->
+                <p id="where" class="text-sm pb-4">OIST,Bhopal,M.P</p>
+                <p id="time" class="text-sm"><i class="uil uil-calendar-alt"></i>2023-Present</p>
+              </li>
+              <li class="flex flex-col items-center mt-2">
+                <p class="absolute h-4 w-4 rounded-full  bg-cyan-200 "></p> <!--bg-black-->
+                <p class="mx-2 h-full w-[2px] bg-cyan-200"></p>
+              </li>
+              <li class=" w-32 md:w-40"></li><!-- bg-slate 500 -->
+            </ul>
+
+
+            <ul data-aos="fade-up" class="flex gap-3 h-fit">
+              <li class=" w-32 md:w-40"></li><!-- bg-slate 500 -->
+              <li class="flex flex-col items-center">
+                <p class="absolute mt-2 h-4 w-4 rounded-full bg-cyan-200 "></p>
+                <p class="mx-2 h-full w-[2px] bg-cyan-200"></p>
+              </li>
+              <li class="  w-32 md:w-40"><!-- bg-slate 500 -->
+                <p id="study" class="py-1 px-2  w-fit bg-cyan-200 text-msgbg rounded-lg font-semibold mb-1">12 Grade</p> <!--bg-red-400-->
+                <p id="where" class="text-sm pb-4">Tender Hearts International
+               public School.</p>
+                <p id="time" class="text-sm"><i class="uil uil-calendar-alt"></i>2021-2022</p>
+              </li>
+            </ul>
+            
+            
+            <ul data-aos="fade-up" class="flex gap-3 h-fit">
+              <li class="  w-32 md:w-40"><!-- bg-slate 500 -->
+                <p id="study" class="py-1 px-2  w-fit bg-cyan-200 text-msgbg rounded-lg font-semibold mb-1">10 Grade</p> <!--bg-red-400-->
+                <p id="where" class="text-sm pb-4">Tender Hearts International <br>
+                 Public School.</p>
+                <p id="time" class="text-sm"><i class="uil uil-calendar-alt"></i>2019-2020</p>
+              </li>
+              <li class="flex flex-col items-center">
+                <p class="absolute mt-2 h-4 w-4 rounded-full bg-cyan-200 "></p>
+                <p class="mx-2 h-full w-[2px] bg-cyan-200"></p>
+              </li>
+              <li class=" w-32 md:w-40"></li><!-- bg-slate 500 -->
+            </ul>
+
+
+          </div>
+
+          <div id="volunteering" class="hidden flex items-center flex-col py-4">
+            
+
+            <ul data-aos="fade-up" class="flex gap-3 h-fit ">
+              <li class=" w-32 md:w-40"><!-- bg-slate 500 -->
+                <p id="study" class="py-1 px-2 bg-cyan-200 w-fit rounded-lg font-semibold mb-1 text-msgbg">SIH 2023</p> <!--bg-red-400-->
+                <p id="where" class="text-sm pb-4">SIH Volunteer at OIST,Bhopal.</p>
+                <p id="time" class="text-sm"><i class="uil uil-calendar-alt"></i>19-20 DEC-2023</p>
+              </li>
+              <li class="flex flex-col items-center mt-2">
+                <p class="absolute h-4 w-4 rounded-full  bg-cyan-200 "></p> <!--bg-black-->
+                <p class="mx-2 h-full w-[2px] bg-cyan-200"></p>
+              </li>
+              <li class=" w-32 md:w-40"></li><!-- bg-slate 500 -->
+            </ul>
+
+
+            <ul data-aos="fade-up" class="flex gap-3 h-fit">
+              <li class=" w-32 md:w-40"></li><!-- bg-slate 500 -->
+              <li class="flex flex-col items-center">
+                <p class="absolute mt-2 h-4 w-4 rounded-full bg-cyan-200 "></p>
+                <p class="mx-2 h-full w-[2px] bg-cyan-200"></p>
+              </li>
+              <li class="  w-32 md:w-40"><!-- bg-slate 500 -->
+                <p id="study" class="py-1 px-2  w-fit bg-cyan-200 text-msgbg rounded-lg font-semibold mb-1">Eddie Hub</p> <!--bg-red-400-->
+                <p id="where" class="text-sm pb-4">Open-Source Volunteer</p>
+                <p id="time" class="text-sm"><i class="uil uil-calendar-alt"></i>DEC 2023-Present</p>
+              </li>
+            </ul>
+
+
+          </div>
+
+          <div id="work" class=" flex items-center flex-col py-4 hidden">
+            
+            <ul class="flex gap-3 h-fit ">
+              <li class=" w-32 md:w-40"><!-- bg-slate 500 -->
+                <p id="study" class="py-1 px-2 bg-cyan-200 w-fit rounded-lg font-semibold mb-1 text-msgbg">IT Intern </p> <!--bg-red-400-->
+                <p id="where" class="text-sm pb-4">OIST,Bhopal,M.P</p>
+                <p id="time" class="text-sm"><i class="uil uil-calendar-alt"></i>2023-Present</p>
+              </li>
+              <li class="flex flex-col items-center mt-2">
+                <p class="absolute h-4 w-4 rounded-full  bg-cyan-200 "></p> <!--bg-black-->
+                <p class="mx-2 h-full w-[2px] bg-cyan-200"></p>
+              </li>
+              <li class=" w-32 md:w-40"></li><!-- bg-slate 500 -->
+            </ul>
+
+
+            
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projectssection" class="w-screen place-content-center p-4 lg:p-14 lg:flex">
+      <div id="projectscontainer" class="font-Poppins p-1 flex-col max-w-full rounded-xl lg:w-[56rem] text-white bg-white/10 md:bg-transparent" > <!--bg-slate-100-->
+        <div data-aos="fade-up" id="header" class="flex flex-col items-center w-full  p-4 lg:py-8"> <!--bg-green-300-->
+          <h1 class="text-3xl font-extrabold lg:text-4xl">Projects</h1>
+          <p class="text-sm font-medium lg:text-md">My hands-on projects</p>
+        </div>
+        <div id="div_body" class="grid gap-5 p-4 w-full md:p-8 md:grid-cols-2  md:h-max ">
+
+          <div class="p-0 bg-slate-500 rounded-md hidden">
+            <div id="Clothify" class="p-4 flex flex-col  w-full bg-green-300 rounded-md">
+              <h1 class="text-xl font-extrabold lg:text-xl">Clothify</h1>
+              <h3 class="text-xs lg:text-xs ">Built fully responsive E-Commerce WebApp <br> with HTML,CSS,JS,MySQL and
+                Django Web-Framework .</h3>
+              <div class="aspect-video h-auto bg-slate-400"></div>
+              <p>view here</p>
+            </div>
+          </div>
+
+          <div class="p-0 bg-slate-500 rounded-md hidden">
+            <div id="LMS" class="p-4 flex flex-col  w-full bg-green-300 rounded-md">
+              <h1 class="text-xl font-extrabold lg:text-xl">BookShelf</h1>
+              <h3 class="text-xs lg:text-xs ">Built fully responsive Library Management System with HTML,CSS,JS,MySQL
+                and Django Web-Framework.</h3>
+              <div class="aspect-video h-auto bg-slate-400"></div>
+              <p>view here</p>
+            </div>
+          </div>
+
+          <div data-aos="zoom-in"  class="p-0 bg-slate-500 rounded-md m-4">
+            <div id="header" class="p-4 flex flex-col  w-full bg-msgbg dark:border-cyan-400 border-2 rounded-md"> <!--bg-green-300-->
+              <h1 class="text-xl font-extrabold lg:text-xl">Tic Tac Toe</h1>
+              <h3 class="text-xs lg:text-xs ">Built fully responsive Tic-Tac-Toe game <br> with pure HTML,CSS & JS.</h3>
+              <a href="https://coderr1ck.github.io/Calculator/" target="_blank"><div style="background-image: url(tictactoe.png)" class="bg-cover bg-center aspect-video h-auto bg-slate-400 my-2"></div></a>
+              <a href="https://coderr1ck.github.io/tictactoe/" target="_blank" class="hover:underline "><p><i class="uil uil-browser pl-2"></i> view here <i class="uil uil-link"></i></p></a>
+            </div>
+          </div>
+
+          <div data-aos="zoom-in" class="p-0 bg-slate-500 rounded-md m-4">
+            <div id="header" class="p-4 flex flex-col  w-full bg-msgbg rounded-md dark:border-cyan-400 border-2"> <!--bg-green-300-->
+              <h1 class="text-xl font-extrabold lg:text-xl">Calculator</h1>
+              <h3 class="text-xs lg:text-xs ">Built fully responsive Calculator website<br> with pure HTML,CSS & JS.
+              </h3>
+              <a href="https://coderr1ck.github.io/Calculator/" target="_blank"><div style="background-image: url(calculator.png)" class=" bg-cover bg-center aspect-video h-auto bg-slate-400 my-2"></div></a>
+              <a href="https://coderr1ck.github.io/Calculator/" target="_blank" class="hover:underline"><p><i class="uil uil-browser pl-2"></i> view here <i class="uil uil-link"></i></p></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="w-screen place-content-center p-4 lg:p-14 lg:flex">
+      <div id="contactmecontainer" class="font-Poppins p-1 flex-col max-w-full rounded-xl  lg:w-[56rem] text-white bg-white/10 md:bg-transparent"> <!-- bg-slate-100-->
+        <div data-aos="fade-up" id="div_head" class="flex flex-col items-center w-full  p-4 lg:py-8"> <!--bg-green-300-->
+          <h1 class="text-3xl font-extrabold lg:text-4xl">Contact Me</h1>
+          <p class="text-sm font-medium lg:text-md">Wanna Connect with me ? Just mail me.</p>
+        </div>
+        <div id="div_body" class="grid gap-5 p-4 w-full md:px-10  md:grid-cols-2  md:h-max ">
+          <div id="leftPart" class="hidden py-4 md:flex flex-col gap-4 md:gap-6 ">
+
+            <div data-aos="fade-right" id="content" class="flex hover:underline">
+              <span class="flex items-center pl-2"><i class="text-emerald-300 text-4xl align-top uil uil-envelope-alt "></i></span>
+              <span  class="px-4 grid place-content-center">
+                <h1 class="text-lg font-semibold">Email</h1>  
+                <p class="text-xs">thakursurajgaharwar2@gmail.com</p>
+              </span>
+            </div>
+
+            <div data-aos="fade-right" id="content" class="flex hover:underline">
+              <span class="flex items-center pl-2"><i class="text-emerald-300 text-4xl align-top uil uil-instagram "></i></span>
+              <span class="px-4 grid place-content-center">
+                <h1 class="text-lg font-semibold">Instagram</h1>
+                <p class="text-xs">https://www.instagram.com/surajgaharwar__/?igsh=a3FzdHFybGZxNGJ1</p>
+              </span>
+            </div>
+
+            <div data-aos="fade-right" id="content" class="flex hover:underline">
+              <span class="flex items-center pl-2"><i class="text-emerald-300 text-4xl align-top uil uil-twitter-alt "></i></span>
+              <span class="px-4 grid place-content-center">
+                <h1 class="text-lg font-semibold">Twitter</h1>
+                <p class="text-xs">Suraj@123</p>
+              </span>
+            </div>
+
+            <div data-aos="fade-right" id="content" class="flex hover:underline">
+              <span class="flex items-center pl-2"><i class="text-emerald-300 text-4xl align-middle uil uil-location-point "></i></span>
+              <span class="px-4 grid place-content-center">
+                <h1 class="text-lg font-semibold">Location</h1>
+                <p class="text-xs">B-104/105,Patal nagar.Bhopal</p>
+              </span>
+            </div>
+
+          </div>
+          <div id="rightPart" class="relative w-full text-black dark:text-white">
+            <form action="https://formspree.io/f/mdoqggyq" target="_blank" method="POST" class="px-2 relative w-full grid gap-4 md:grid-rows-6 md:grid-cols-2 text-sm">
+              <label data-aos="zoom-in" for="name" class="bg-white/70 dark:bg-msgbg p-2 rounded-md">Name<br>
+                <input name="name" type="text" class="md:w-full bg-transparent dark:bg-msgbg outline-none" required>
+              </label>
+              
+              <label data-aos="zoom-in" for="email" class="bg-white/70 dark:bg-msgbg rounded-md p-2">Email<br>
+                <input name="email" type="email" class="md:w-full  bg-transparent dark:bg-msgbg outline-none" required>
+              </label>
+
+              <label  data-aos="zoom-in" for="subject" class="md:col-start-1 md:col-end-3 bg-white/70 dark:bg-msgbg rounded-md p-2">Subject<br>
+                <input name="subject" type="text" class="w-full  bg-transparent dark:bg-msgbg outline-none" required>
+              </label>
+
+              <label data-aos="zoom-in" for="Description" class=" bg-white/70 dark:bg-msgbg rounded-md p-2 md:row-start-3 md:row-end-6 md:col-start-1 md:col-end-3">Messsage<br>
+                <textarea name="Description"  id="" class="h-32 md:h-40  w-full bg-transparent dark:bg-msgbg outline-none" required></textarea>
+              </label>
+
+              <button data-aos="zoom-in" type="submit" class="h-12 bg-emerald-200 md:bg-emerald-300 rounded-md text-msgbg text-md">Send Message<i class=" uil uil-message px-2"></i></button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <!-- Footer section start here  -->
+  <footer class="bg-white/70 backdrop-blur-sm dark:bg-emerald-200 md:bg-white-300 w-full h-max p-9 text-black">
+    <section  id="upper" class="md:flex place-content-center mb-6 md:p-16">
+      <div class="md:flex place-content-evenly gap-20">
+        <div data-aos="fade-right" class="upper_left flex_col">
+          <h1 class="text-2xl font-semibold font-Poppins pb-6 md:text-3xl">
+           SURAJ SINGH GAHARWAR
+            <p class="pt-1 md:pt-3">| <span class="coder"></span></p>
+
+          </h1>
+          <p class="font-semibold">Student at OIST Bhopal</p>
+          <p class="font-normal">Madhya Pradesh, Bhopal, India .</p>
+        </div>
+
+        <div>
+          <!-- lower div about section -->
+          <ul data-aos="fade-up" class="flex flex-col gap-2 py-6 text-md font-Poppins font-medium md:flex-row md:p-0 md:gap-5 cursor-pointer">
+            <a href="#aboutsection"><li class="hover:underline" >About</li></a>
+            <a href="#skillssection"><li class="hover:underline" >Skills</li></a>
+            <a href="#projectssection"><li class="hover:underline" >Projects</li></a>
+            <a href="#experiencesection"><li class="hover:underline" >Experience</li></a>
+          </ul>
+
+        </div>
+
+        <ul data-aos="fade-left" class="flex gap-10 h-fit py-6 font-Poppins text-xl md:py-0 hover:[&>*]:bg-white/70 dark:hover:[&>*]:bg-cyan-400 [&>*]:px-2 [&>*]:py-1 [&>*]:rounded-md" >
+
+            <li class="px-2 py-1  text-center rounded">
+              <a aria-label="Linkedin" href="https://www.linkedin.com/in/suraj-singh-gaharwar-6b25b3251/" class="footer_social"
+                target="_blank">
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+            </li>
+
+            <li class="px-2 py-1  text-center rounded">
+              <a aria-label="Github" href="https://github.com/surajgaharwar" class="footer_social" target="_blank">
+                <i class=" uil uil-github-alt"></i>
+              </a>
+            </li>
+            <!-- Twitter Icon -->
+            <!-- <li class="px-2 py-1 text-center rounded">
+              <a aria-label="Twitter" href="sujal sharma999" class="footer_social" target="_blank">
+                <i class="uil uil-twitter-alt"></i>
+              </a>
+            </li> -->
+            <!-- Insta Icon -->
+            <li class="px-2 py-1  text-center rounded">
+              <a aria-label="Instagram" href="https://www.instagram.com/surajgaharwar__?igsh=a3FzdHFybGZxNGJ1" class="footer_social"
+                target="_blank">
+                <i class="uil uil-instagram"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        </ul>
+    </section>
+    <section class="flex w-full justify-center font-Poppins text-sm">
+      <p  class="text-center">
+       SURAJ SINGH-2024<br>
+        Souce code available on GitHub
+      </p>
+    </section>
+  </footer>
+    
+  <!-- <script src="index.js"></script> -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  <!-- footer section ends here -->
+
+
+</body>
+
+</html>
