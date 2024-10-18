@@ -1,0 +1,336 @@
+.scroll::-webkit-scrollbar{
+    display: none;
+  }
+
+  @keyframes typing {
+0.0000%,
+27.3488% {
+  content: "";
+}
+
+1.1395%,
+26.2093% {
+  content: "Inn";
+}
+
+2.2791%,
+25.0698% {
+  content: "Innovat";
+}
+
+3.4186%,
+23.9302% {
+  content: "Innovation";
+}
+
+30.7674%,
+51.2791% {
+  content: "";
+}
+
+31.9070%,
+50.1395% {
+  content: "E";
+}
+
+33.0465%,
+49.0000% {
+  content: "En";
+}
+
+34.1860%,
+47.8605% {
+  content: "Ent";
+}
+
+35.3256%,
+46.7209% {
+  content: "Entre";
+}
+
+36.4651%,
+45.5814% {
+  content: "Entrepre";
+}
+
+37.6047%,
+44.4419% {
+  content: "Entrepreneur";
+}
+
+38.7443%,
+43.3023% {
+  content: "Entrepreneurship";
+}
+
+54.6977%,
+85.2093% {
+  content: "";
+}
+
+55.8372%,
+84.0698% {
+  content: "E";
+}
+
+56.9767%,
+82.9302% {
+  content: "En";
+}
+
+58.1163%,
+81.7907% {
+  content: "Eng";
+}
+
+59.2558%,
+80.6512% {
+  content: "Engi";
+}
+
+60.3953%,
+79.5116% {
+  content: "Engin";
+}
+
+61.5349%,
+78.3721% {
+  content: "Engine";
+}
+
+62.6745%,
+77.2325% {
+  content: "Enginee";
+}
+
+63.8141%,
+76.0929% {
+  content: "Engineer";
+}
+
+64.9537%,
+74.9533% {
+  content: "Engineeri";
+}
+
+66.0933%,
+73.8137% {
+  content: "Engineering";
+}
+}
+
+@keyframes blink {
+0%,
+100% {
+  opacity: 1;
+}
+
+50% {
+  opacity: 0;
+}
+}
+
+.typewriter {
+--caret: currentcolor;
+}
+
+.typewriter::before {
+content: "";
+animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+content: "";
+border-right: 2px solid var(--caret);
+animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+.typewriter::after {
+  animation: none;
+}
+
+@keyframes sequencePopup {
+  0%,
+  100% {
+    content: "Web";
+  }
+
+  25% {
+    content: "Android";
+  }
+
+  50% {
+    content: "Blockchain";
+  }
+}
+
+.typewriter::before {
+  content: "Web";
+  animation: sequencePopup 12s linear infinite;
+}
+}
+
+/* code for gradient */
+.gradient {
+background: linear-gradient(
+    90deg,
+    #edede8,
+    hsl(184deg 64% 72%),
+    #edede8
+  )
+  0 0 / 200% 100%;
+color: transparent;
+-webkit-background-clip: text;
+background-clip: text;
+animation: move-bg 8s infinite linear;
+}
+@keyframes move-bg {
+to {
+  background-position: 400% 0;
+}
+}
+
+
+@keyframes coding {
+  
+
+  0.0000%,
+  27.3488% {
+    content: "";
+  }
+  
+  1.1395%,
+  26.2093% {
+    content: "E";
+  }
+  
+  2.2791%,
+  25.0698% {
+    content: "En";
+  }
+  
+  3.4186%,
+  23.9302% {
+    content: "Engi";
+  }
+
+  4.4816%,
+  22.8731%{
+    content: "Engine"
+  }
+  5.4816%,
+  21.5731%{
+    content: "Engineer"
+  }
+  
+  30.7674%,
+  51.2791% {
+    content: "";
+  }
+  
+  31.9070%,
+  50.1395% {
+    content: "D";
+  }
+  
+  33.0465%,
+  49.0000% {
+    content: "De";
+  }
+  
+  34.1860%,
+  47.8605% {
+    content: "Dev";
+  }
+  
+  35.3256%,
+  46.7209% {
+    content: "Devel";
+  }
+  
+  36.4651%,
+  45.5814% {
+    content: "Develo";
+  }
+  
+  37.6047%,
+  44.4419% {
+    content: "Develop";
+  }
+  
+  38.7443%,
+  43.3023% {
+    content: "Developer";
+  }
+  
+  54.6977%,
+  85.2093% {
+    content: "";
+  }
+  
+  55.8372%,
+  84.0698% {
+    content: "C";
+  }
+  
+  56.9767%,
+  82.9302% {
+    content: "Co";
+  }
+  
+  58.1163%,
+  81.7907% {
+    content: "Cod";
+  }
+  
+  59.2558%,
+  80.6512% {
+    content: "Coder";
+  }
+  
+  60.3953%,
+  79.5116% {
+    content: "Coderr";
+  }
+  
+  61.5349%,
+  78.3721% {
+    content: "Coderrr";
+  }
+  
+  62.6745%,
+  77.2325% {
+    content: "Coderrr1";
+  }
+  
+  63.8141%,
+  76.0929% {
+    content: "Coderrr1c";
+  }
+  
+  64.9537%,
+  74.9533% {
+    content: "Coderrr1ck";
+  }
+  
+  
+  
+  
+
+}
+
+
+
+.coder::before {
+  content: "";
+  animation: coding 13.5s infinite;
+}
